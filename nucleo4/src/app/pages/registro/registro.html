@@ -1,0 +1,8 @@
+<div class="container">
+  <h2>Registro</h2>
+  <form (ngSubmit)="registrar(formulario)" #formulario="ngForm">
+    <input type="email" name="correo" ngModel placeholder="Correo electrónico" required>
+    <input type="password" name="contrasena" ngModel placeholder="Contraseña" required>
+    <button type="submit">Crear cuenta</button>
+  </form>
+</div>

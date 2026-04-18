@@ -1,0 +1,17 @@
+<div class="container">
+  <h2>Editar Servicio</h2>
+  <form (ngSubmit)="guardar()">
+    <label>Nombre:</label>
+    <input [(ngModel)]="producto.nombre" name="nombre">
+
+    <label>Ciudad:</label>
+    <input [(ngModel)]="producto.ciudad" name="ciudad">
+
+    <label>Precio:</label>
+    <input [(ngModel)]="producto.precio" name="precio" >
+
+    <button type="submit">Guardar</button>
+  </form>
+
+  <button (click)="eliminar()">Eliminar</button>
+</div>

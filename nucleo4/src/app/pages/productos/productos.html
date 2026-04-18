@@ -1,0 +1,22 @@
+
+filtro:
+<input type="text" name="precio" [(ngModel)]=buscar>
+<br>
+
+<hr>
+@if(  Productos| async; as productos ){
+@for(producto of productos.servicio_medico; track producto){
+  @if( producto.info.precio === buscar+' USD'){ 
+<div class="card">
+  <div class="card-header">{{producto.nombre}}</div>
+  <div class="card-body">
+    <img src={{producto.info.imagen}} width="200px"/>
+    <br>
+    <br>
+    <button (click)="guardar(producto)"> Agregar </button>
+  </div>
+  <div class="card-footer">{{producto.info.precio}}</div>
+</div>
+}
+}
+}
